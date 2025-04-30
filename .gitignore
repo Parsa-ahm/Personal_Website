@@ -1,0 +1,18 @@
+# Node
+frontend/node_modules
+frontend/.env
+
+# Python
+projects/ml/__pycache__/
+projects/ml/*.pyc
+projects/ml/model.joblib
+projects/ml/.env
+
+# Java
+backend/target/
+*.class
+
+# Docker
+*.log
+.env
+
