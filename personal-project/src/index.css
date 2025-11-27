@@ -1,0 +1,312 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --primary-green: #4F7B5B;
+  --light-orange: #E3995E;
+  --dark-orange: #DB5D38;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;
+  color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  min-width: 100vw;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Custom styles for the portfolio */
+.skill-chart {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#E3995E 0% 75%,
+      #DB5D38 75% 100%);
+}
+
+/* Project cards hover effect */
+.MuiCard-root {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom bullet points */
+.bullet-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.bullet-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0.5em;
+  color: #E3995E;
+}
+
+/* Navigation styles */
+.nav-link {
+  color: #4F7B5B;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(79, 123, 91, 0.1);
+}
+
+/* Custom container for better readability */
+@media (min-width: 1200px) {
+  .MuiContainer-root {
+    max-width: 1400px !important;
+  }
+}
+
+/* Skill charts */
+.skill-chart-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+.skill-chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.skill-chart path {
+  transition: stroke-dasharray 0.5s ease;
+}
+
+/* Project cards */
+.project-card {
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Boggle grid */
+.boggle-letter {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.boggle-letter:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Navigation */
+.nav-tabs {
+  border-bottom: 2px solid #4F7B5B;
+}
+
+.nav-tab {
+  color: #4F7B5B;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-tab.active {
+  color: #DB5D38;
+  border-bottom: 2px solid #DB5D38;
+}
+
+/* Buttons */
+.github-button {
+  background-color: #DB5D38 !important;
+  color: white !important;
+  padding: 0.5rem 2rem !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+.github-button:hover {
+  background-color: #E3995E !important;
+  transform: translateY(-2px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-orange);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .skill-chart-container {
+    padding-bottom: 75%;
+  }
+
+  .nav-tab {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Chart Styles */
+.chart-container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: none;
+}
+
+.chart-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.chart-label .skill-name {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.chart-label .skill-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Button Hover Effects */
+.MuiButton-root {
+  transition: all 0.2s ease-in-out !important;
+}
+
+.MuiButton-root:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation Tab Transitions */
+.MuiTab-root {
+  transition: all 0.2s ease-in-out !important;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .chart-label .skill-name {
+    font-size: 0.875rem;
+  }
+
+  .chart-label .skill-value {
+    font-size: 1.25rem;
+  }
+}
